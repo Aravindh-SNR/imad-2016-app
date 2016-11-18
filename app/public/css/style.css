@@ -1,0 +1,129 @@
+body {
+    padding-top: 50px;
+    text-align: center;
+    font-size: 18px;
+}
+
+a.navbar-brand {
+    color: #000!important;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.myNavbar a {
+    color: #000!important;
+}
+
+@media only screen and (max-width: 1200px) {
+    .homeBottomSpace {
+        margin-bottom: 30px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .squadBottomSpace {
+        margin-bottom: 30px;
+    }
+}
+
+.myBanner {
+    color: #fff;
+    background: url('http://i1.mirror.co.uk/incoming/article7681489.ece/ALTERNATES/s1023/Leicester-City-v-Southampton.jpg'), linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    background-position: 0% 15%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 350px;
+    background-blend-mode: darken;
+}
+
+.myBanner h2 {
+    padding-top: 80px;
+}
+
+.thumbnail {
+    border: 1px solid #000;
+}
+
+#clubLogo {
+    max-width: 100%;
+    min-height: 100px;
+    max-height: 100px;
+    padding-top: 10px;
+}
+
+#squadButton {
+    margin-bottom: 10px;
+}
+
+#pointsTable {
+    border: 1px solid burlywood;
+}
+
+#pointsTable th {
+    background-color: burlywood;
+}
+
+#pointsTable th, #pointsTable td {
+    vertical-align: middle;
+}
+
+#leagueTab {
+    margin-top: 25px;
+}
+
+@media only screen and (max-width: 768px) {
+    #leagueTab {
+        margin-top: 60px;
+    }
+}
+
+.squadList {
+    margin-top: 25px;
+}
+
+@media only screen and (max-width: 768px) {
+    .squadList {
+        margin-top: 60px;
+    }
+}
+
+a.noUnderline:link {
+    color: #000000; 
+    text-decoration: none;
+}
+
+.accordionPanel {
+    background-color: #DCDCDC;
+}
+
+.boldHeading {
+    font-weight: bold;
+}
+
+.blueHeading {
+    color: darkblue;
+}
+
+.blueBackground {
+    background-color: lightblue;
+}
+
+.leftAlign {
+    text-align: left;
+}
+
+.rightAlign {
+    text-align: right;
+}
+
+@media only screen and (max-width: 380px) {
+    .smallText {
+        font-size: 11px;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    .squadList {
+        font-size: 15px;
+    }
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head><% include partials/head.ejs %></head>
+    <body>
+        <% include partials/header.ejs %>
+        <div class="container-fluid">
+            
+            <div class="tab-content" id="leagueTab">
+                <div class="tab-pane fade in active" id="clubs" role="tabpanel">
+                    <div class="container">
+                        <div class="row">
+                            <%- clubContent %>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tab-pane fade" id="fixtures" role="tabpanel">
+                    <div class="container">
+                        <div class="panel-group leftAlign smallText" id="accordion">
+                            <%- matchContent %>
+                        </div>
+                    </div>  
+                </div>
+                
+                <div class="tab-pane fade" id="standings" role="tabpanel">
+                    <div class="container">
+                        <table class="table table-responsive" id="pointsTable">
+                            <thead>
+                                <tr>
+                                    <th class="text-center">#</th>
+                                    <th class="text-center"></th>
+                                    <th class="text-center">Team</th>
+                                    <th class="text-center">Played</th>
+                                    <th class="text-center">Won</th>
+                                    <th class="text-center">Drawn</th>
+                                    <th class="text-center">Lost</th>
+                                    <th class="text-center">Goals For</th>
+                                    <th class="text-center">Goals Against</th>
+                                    <th class="text-center">Goal Difference</th>
+                                    <th class="text-center">Points</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <%- pointsTable %>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
