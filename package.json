@@ -2,7 +2,7 @@
   "name": "imad-2016-base",
   "version": "0.1.0",
   "description": "High Five (webapp): Your one-stop guide to the Top Five Football Leagues in the world.",
-  "main": "app/server.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
