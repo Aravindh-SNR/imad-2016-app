@@ -97,6 +97,8 @@ router.get('/leagues/:league', function(req, res){
     
     htmlString += `</div></div></div></div></div></body></html>`;
     
+    res.send(htmlString);
+    
     /*request(options, function(err, response, body) {
 
         options.url = baseUrl + '/competitions/' + leagueCode + '/fixtures';
