@@ -13,6 +13,10 @@ app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
 
+app.get('/ui/banner.jpg', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'banner.jpg'));
+});
+
 var port = 8080;
 app.listen(port, function () {
   console.log(`IMAD course app listening on port ${port}!`);
