@@ -20,8 +20,8 @@ a.navbar-brand {
 
 .myBanner {
     color: #fff;
-    background: url('http://i1.mirror.co.uk/incoming/article7681489.ece/ALTERNATES/s1023/Leicester-City-v-Southampton.jpg'), linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-    background-position: 0% 15%;
+    background: url('./banner.jpg'), linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    background-position: 45% 15%;
     background-size: cover;
     background-repeat: no-repeat;
     height: 350px;
