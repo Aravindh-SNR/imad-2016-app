@@ -131,6 +131,6 @@ function loadLoginForm () {
     };
 }
 
-$(function(){
+(function(){
    loadLogin(); 
-});
+}());
