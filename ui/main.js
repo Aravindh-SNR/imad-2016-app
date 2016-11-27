@@ -4,11 +4,13 @@ function loadLogin () {
     request.onreadystatechange = function () {
         if (request.readyState === XMLHttpRequest.DONE) {
             if (request.status === 200) {
-                console.log('success');
+                
                 if(this.responseText === 'Not logged in'){
                     loadLoginForm();
+                    console.log('success1');
                 } else {
                     loadLoggedInUser(this.responseText);
+                    console.log('success2');
                 }
             }
         }
@@ -19,6 +21,7 @@ function loadLogin () {
 }
 
 function loadLoggedInUser (username) {
+    console.log('success2-2');
     var userSection = $('#userSection');
     userSection.innerHTML = `<h2 id="welcome"></h2>
                             <button type="submit" class="btn btn-default" id="logout">Log out</button>
@@ -53,6 +56,7 @@ function loadLoggedInUser (username) {
 }
 
 function loadLoginForm () {
+    console.log('success1-1');
     var userSection = $('#userSection');
     userSection.innerHTML = `<p>Please log in to enter feedback.</p>
                                     <form class="form-horizontal">
