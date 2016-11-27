@@ -47,6 +47,7 @@ app.post('/add-feedback', function (req, res) {
    pool.query('INSERT INTO "feedback" (feedback, name) VALUES ($1, $2)', [feedback, name], function (err, result) {
       if (err) {
           res.status(500).send(err.toString());
+          console.log(err.toString());
       } else {
           res.redirect('/get-feedback');
       }
@@ -57,6 +58,7 @@ app.get('/get-feedback', function (req, res) {
    pool.query('SELECT feedback, name FROM "feedback"', function(err, result) {
        if(err) {
            res.status(500).send(err.toString());
+           console.log(err.toString());
        } else {
            res.send(JSON.stringify(result.rows));
        }
