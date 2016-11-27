@@ -14,10 +14,6 @@ a.navbar-brand {
     color: #000!important;
 }
 
-.homeBottomSpace {
-    margin-bottom: 30px;
-}
-
 .myBanner {
     color: #fff;
     background: url('./banner.jpg'), linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
@@ -30,8 +26,4 @@ a.navbar-brand {
 
 .myBanner h2 {
     padding-top: 80px;
-}
-
-.thumbnail {
-    border: 1px solid #000;
 }
