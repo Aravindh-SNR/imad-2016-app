@@ -130,6 +130,4 @@ function loadLoginForm () {
     };
 }
 
-$(document).ready(function() {
-    loadLogin();
-})
+loadLogin();
