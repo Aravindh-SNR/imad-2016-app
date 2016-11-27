@@ -129,4 +129,6 @@ function loadLoginForm () {
     };
 }
 
-loadLogin();
+$('document').ready(function(){
+    loadLogin();
+});
