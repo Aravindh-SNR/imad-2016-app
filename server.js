@@ -54,11 +54,11 @@ app.get('/check-login', function (req, res) {
            if (err) {
               res.status(500).send(err.toString());
            } else {
-              res.send(result.rows[0].username);    
+              res.status(200).send(result.rows[0].username);    
            }
        });
    } else {
-       res.send('Not logged in');
+       res.status(200).send('Not logged in');
    }
 });
 
