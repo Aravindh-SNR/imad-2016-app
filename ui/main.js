@@ -1,4 +1,4 @@
-$('#submit').onclick = function(){
+document.getElementById('submit').onclick = function(){
     var request = new XMLHttpRequest();
     request.onreadystatechange = function (){
         if (request.readyState === XMLHttpRequest.DONE){
@@ -11,13 +11,13 @@ $('#submit').onclick = function(){
                                         <p>${feedbackData.feedback}</p>
                                         <hr>`;
                 }
-                $('#feedbackSection').innerHTML = feedbackContent;
+                document.getElementById('feedbackSection').innerHTML = feedbackContent;
             }
         }
     };
     
-    var name = $('#name').value;
-    var feedback = $('#feedback').value;
+    var name = document.getElementById('name').value;
+    var feedback = document.getElementById('feedback').value;
     request.open('POST', '/add-feedback', true);
     request.setRequestHeader('Content-Type', 'application/json');
     request.send(JSON.stringify({feedback: feedback, name: name}));
