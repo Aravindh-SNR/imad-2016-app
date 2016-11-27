@@ -4,10 +4,11 @@ function loadLogin () {
     request.onreadystatechange = function () {
         if (request.readyState === XMLHttpRequest.DONE) {
             if (request.status === 200) {
-                loadLoggedInUser(this.responseText);
-            } else {
-                loadLoginForm();
-            }
+                if(this.responseText === 'Not logged in'){
+                    loadLoginForm();
+                } else {
+                    loadLoggedInUser(this.responseText);
+                }
         }
     };
     
