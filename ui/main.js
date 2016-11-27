@@ -1,11 +1,11 @@
-document.getElementById('submit').onclick = function(){
+$(document).on('click', '#submit', function() {
     var request = new XMLHttpRequest();
-    request.onreadystatechange = function (){
+    request.onreadystatechange = function () {
         if (request.readyState === XMLHttpRequest.DONE){
             if (request.status === 200) {
                 var feedbackContent = '';
                 var feedbackData = JSON.parse(this.responseText);
-                for(var i = feedbackData.length - 1; i >= 0; i--){
+                for(var i = feedbackData.length - 1; i >= 0; i--) {
                     var feedbackItem = feedbackData[i];
                     feedbackContent += `<p><b>${feedbackItem.name}</b></p>
                                         <p>${feedbackData.feedback}</p>
@@ -21,4 +21,4 @@ document.getElementById('submit').onclick = function(){
     request.open('POST', '/add-feedback', true);
     request.setRequestHeader('Content-Type', 'application/json');
     request.send(JSON.stringify({feedback: feedback, name: name}));
-}
+});
