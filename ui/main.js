@@ -43,7 +43,7 @@ $("form").submit(function(e){
             }
             $('#feedbackSection').innerHTML = feedbackContent;
         },
-        error: function(xhr, status err) {
+        error: function(xhr, status, err) {
             $('#feedbackSection').innerHTML = '';
         }
     });
