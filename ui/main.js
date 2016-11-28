@@ -33,6 +33,7 @@ $("form").submit(function(e){
         contentType: 'application/json; charset=UTF-8',
         data: JSON.stringify({feedback: feedback, username: username}),
         success: function(data, status, xhr) {
+            console.log('hello3');
             var feedbackContent = '';
             var feedbackData = JSON.parse(data);
             for(var i = feedbackData.length - 1; i >= 0; i--) {
@@ -44,6 +45,7 @@ $("form").submit(function(e){
             $('#feedbackSection').innerHTML = feedbackContent;
         },
         error: function(xhr, status, err) {
+            console.log('hello4');
             $('#feedbackSection').innerHTML = '';
         }
     });
