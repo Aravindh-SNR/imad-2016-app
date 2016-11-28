@@ -48,6 +48,7 @@ app.post('/add-feedback', function (req, res) {
    pool.query('INSERT INTO "feedback" (feedback, username) VALUES ($1, $2)', [feedback, username], function (err, result) {
        console.log('hello2');
       if (err) {
+          console.log(err.toString());
           res.status(500).send(err.toString());
       } else {
           res.redirect('/get-feedback');
