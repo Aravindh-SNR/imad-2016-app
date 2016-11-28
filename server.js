@@ -51,7 +51,15 @@ app.post('/add-feedback', function (req, res) {
           console.log(err.toString());
           res.status(500).send(err.toString());
       } else {
-          res.redirect('/get-feedback');
+          /*res.redirect('/get-feedback');*/
+          pool.query('SELECT feedback, name FROM feedback', function(err, result) {
+              console.log('hello5');
+               if(err) {
+                   res.status(500).send(err.toString());
+               } else {
+                   res.send(JSON.stringify(result.rows));
+               }
+   }) 
       }
    });
 });
