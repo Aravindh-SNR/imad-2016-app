@@ -27,10 +27,12 @@ $("form").submit(function(e){
     e.preventDefault();
     var username = $('#name').value;
     var feedback = $('#feedback').value;
+    console.log(username);
+    console.log(feedback);
     $.ajax({
         url: "/add-feedback",
         type: "POST",
-        contentType: 'application/json; charset=UTF-8',
+        /*contentType: 'application/json; charset=UTF-8',*/
         data: JSON.stringify({feedback: feedback, username: username}),
         success: function(data, status, xhr) {
             console.log('hello3');
