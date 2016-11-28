@@ -25,13 +25,13 @@
 
 $("form").submit(function(e){
     e.preventDefault();
-    var name = $('#name').value;
+    var username = $('#name').value;
     var feedback = $('#feedback').value;
     $.ajax({
         url: "/add-feedback",
         type: "POST",
         contentType: 'application/json; charset=UTF-8',
-        data: JSON.stringify({feedback: feedback, name: name}),
+        data: JSON.stringify({feedback: feedback, username: username}),
         success: function(data, status, xhr) {
             var feedbackContent = '';
             var feedbackData = JSON.parse(data);
