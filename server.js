@@ -42,36 +42,16 @@ app.get('/ui/main.js', function (req, res) {
 var pool = new Pool(config);
 
 app.post('/add-feedback', function (req, res) {
-   console.log('hello1');
+
    var username = req.body.username;
-   var feedback = req.body.feedback;
-   pool.query('INSERT INTO feedback (feedback, username) VALUES ($1, $2)', [feedback, username], function (err, result) {
-       console.log('hello2');
+   var comment = req.body.comment;
+   pool.query('INSERT INTO feedback (comment, username) VALUES ($1, $2)', [comment, username], function (err, result) {
       if (err) {
-          console.log(err.toString());
           res.status(500).send(err.toString());
       } else {
-          /*res.redirect('/get-feedback');*/
-          /*pool.query('SELECT feedback, name FROM feedback', function(err, result) {
-              console.log('hello5');
-               if(err) {
-                   res.status(500).send(err.toString());
-               } else {
-                   res.send(JSON.stringify(result.rows));
-               }
-        }) */
+          res.send('Feedback successfully added');
       }
    });
-});
-
-app.get('/get-feedback', function (req, res) {
-   pool.query('SELECT feedback, name FROM "feedback"', function(err, result) {
-       if(err) {
-           res.status(500).send(err.toString());
-       } else {
-           res.send(JSON.stringify(result.rows));
-       }
-   }) 
 });
 
 var port = 8080;
