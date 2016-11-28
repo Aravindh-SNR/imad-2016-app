@@ -32,7 +32,7 @@ $("form").submit(function(e){
     $.ajax({
         url: "/add-feedback",
         type: "POST",
-        /*contentType: 'application/json; charset=UTF-8',*/
+        contentType: 'application/json; charset=UTF-8',
         data: JSON.stringify({feedback: feedback, username: username}),
         success: function(data, status, xhr) {
             console.log('hello3');
