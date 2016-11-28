@@ -1,20 +1,6 @@
 var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
-var Pool = require('pg').Pool;
-var bodyParser = require('body-parser');
-
-var config = {
-    user: 'aravindh-snr',
-    database: 'aravindh-snr',
-    host: 'db.imad.hasura-app.io',
-    port: '5432',
-    password: process.env.DB_PASSWORD
-};
-
-var app = express();
-app.use(morgan('combined'));
-app.use(bodyParser.json());
 
 var app = express();
 app.use(morgan('combined'));
@@ -29,29 +15,6 @@ app.get('/ui/style.css', function (req, res) {
 
 app.get('/ui/banner.jpg', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'banner.jpg'));
-});
-
-app.get('/feedback', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'feedback.html'));
-});
-
-app.get('/ui/main.js', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'main.js'));
-});
-
-var pool = new Pool(config);
-
-app.post('/add-feedback', function (req, res) {
-
-   var username = req.body.username;
-   var comment = req.body.comment;
-   pool.query('INSERT INTO feedback (comment, username) VALUES ($1, $2)', [comment, username], function (err, result) {
-      if (err) {
-          res.status(500).send(err.toString());
-      } else {
-          res.send('Feedback successfully added');
-      }
-   });
 });
 
 var port = 8080;
