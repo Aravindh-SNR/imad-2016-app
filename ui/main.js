@@ -25,8 +25,8 @@
 
 $("form").submit(function(e){
     e.preventDefault();
-    var username = $('#name').value;
-    var feedback = $('#feedback').value;
+    var username = $('#name').val();
+    var feedback = $('#feedback').val();
     console.log(username);
     console.log(feedback);
     $.ajax({
