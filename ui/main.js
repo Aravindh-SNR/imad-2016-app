@@ -48,6 +48,7 @@ $("form").submit(function(e){
         },
         error: function(xhr, status, err) {
             console.log('hello4');
+            console.log(err.toString());
             $('#feedbackSection').innerHTML = '';
         }
     });
