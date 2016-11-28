@@ -37,7 +37,7 @@ $("form").submit(function(e){
             var feedbackData = JSON.parse(data);
             for(var i = feedbackData.length - 1; i >= 0; i--) {
                 var feedbackItem = feedbackData[i];
-                feedbackContent += `<p><b>${feedbackItem.name}</b></p>
+                feedbackContent += `<p><b>${feedbackItem.username}</b></p>
                                     <p>${feedbackItem.feedback}</p>
                                     <hr>`;
             }
