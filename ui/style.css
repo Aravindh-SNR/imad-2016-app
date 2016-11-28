@@ -31,8 +31,3 @@ a.navbar-brand {
 #feedbackSection {
     text-align: left!important;
 }
-
-#name, #feedback {
-    max-width: 50%;
-    align-items: center;
-}
