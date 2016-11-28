@@ -23,7 +23,7 @@
     request.send(JSON.stringify({feedback: feedback, name: name}));
 });*/
 
-$("myForm").submit(function(e){
+$("form").submit(function(e){
     e.preventDefault();
     var name = $('#name').value;
     var feedback = $('#feedback').value;
