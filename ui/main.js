@@ -14,7 +14,7 @@ var submitFeedback = document.getElementById('submit');
         };
         
         // Make the request
-        var name = document.getElementById('username').value;
+        var username = document.getElementById('name').value;
         var feedback = document.getElementById('feedback').value;
         console.log(username);
         console.log(feedback);
