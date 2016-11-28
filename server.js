@@ -42,9 +42,9 @@ app.get('/ui/main.js', function (req, res) {
 var pool = new Pool(config);
 
 app.post('/add-feedback', function (req, res) {
+   console.log('hello1');
    var username = req.body.username;
    var feedback = req.body.feedback;
-   console.log('hello1');
    pool.query('INSERT INTO "feedback" (feedback, username) VALUES ($1, $2)', [feedback, username], function (err, result) {
        console.log('hello2');
       if (err) {
